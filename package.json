@@ -1,0 +1,43 @@
+{
+  "name": "lives-of-the-poets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsheldon3ayers/lives-of-the-poets.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "keywords": [],
+  "author": "Robert Ayers <rsheldon3ayers@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsheldon3ayers/lives-of-the-poets/issues"
+  },
+  "homepage": "https://github.com/rsheldon3ayers/lives-of-the-poets#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.8",
+    "pg": "^4.5.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
+}

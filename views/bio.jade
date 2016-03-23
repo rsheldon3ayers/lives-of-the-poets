@@ -1,0 +1,10 @@
+include ../includes/head.jade
+  body
+  div.button-group
+    a.button(href='/chapbook') Save
+    a.button(href='/findPoems') Read Poems
+    a.button(href='/') Go Back
+  each  val in bio
+    div.row
+      div(class='small-12 large-7 columns')
+        p= val
