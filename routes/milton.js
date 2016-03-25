@@ -8,7 +8,8 @@ const Milton = require('../models/milton');
 router.get('/milton', (req, res) => {
   Milton.findOne().exec((err, bio) => {
     if (err) throw err;
-  res.render('bio', {bio: bio.life });
+  res.render('bio', {bio: bio.life,
+                    lastName: 'Milton' });
   });
 });
 

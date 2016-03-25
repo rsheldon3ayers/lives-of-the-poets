@@ -31,8 +31,11 @@
   },
   "homepage": "https://github.com/rsheldon3ayers/lives-of-the-poets#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
     "express": "^4.13.4",
     "jade": "^1.11.0",
+    "lodash": "^4.6.1",
     "mongoose": "^4.4.8",
     "pg": "^4.5.1",
     "request": "^2.69.0"

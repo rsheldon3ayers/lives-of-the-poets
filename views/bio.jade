@@ -1,10 +1,12 @@
 include ../includes/head.jade
   body
   div.button-group
-    a.button(href='/chapbook') Save
-    a.button(href='/findPoems') Read Poems
+    a.button(href='/chapbook') Save This Bio
+    a.button(href='/findPoems/#{lastName}') Read A Poem
     a.button(href='/') Go Back
   each  val in bio
     div.row
-      div(class='small-12 large-7 columns')
-        p= val
+      div(class='small-8 medium-6 large-5 small-centered columns')
+        div(class='header panel')
+          p
+            span= val

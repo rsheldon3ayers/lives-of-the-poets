@@ -1,0 +1,13 @@
+include ../includes/head.jade
+  body
+  div.button-group
+    a.button(href='/chapbook') Save This Poem
+    a.button(href='/findPoems') Read Another Poem
+    a.button(href='/') Go Back
+  div.roww
+    div(class='small-8 medium-6 large-5 large-centered columns')
+      div(class='header panel')
+        div.sign
+          h5= title
+          each val in lines
+            p.poem= val

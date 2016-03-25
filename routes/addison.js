@@ -5,10 +5,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Addison = require('../models/addison');
 
-router.get('/addison', (req, res) => {
+router.get('/joseph-addison', (req, res) => {
   Addison.findOne().exec((err, bio) => {
     if (err) throw err;
-  res.render('bio', {bio: bio.life });
+  res.render('bio', {bio: bio.life,
+                     lastName: 'Addison' });
   });
 });
 
