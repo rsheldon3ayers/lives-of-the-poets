@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const router     = express.Router();
 const findPoem = require('../controllers/poem');
 
-router.get('/findPoems/:lastName', findPoem.get)
+router.get('/findPoems/:lastName/:searchName', findPoem.get)
 
 module.exports = router;
 

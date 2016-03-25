@@ -2,7 +2,7 @@ include ../includes/head.jade
   body
   div.button-group
     a.button(href='/chapbook') Save This Bio
-    a.button(href='/findPoems/#{lastName}') Read A Poem
+    a.button(href='/findPoems/#{lastName}/#{searchName}') Read A Poem
     a.button(href='/') Go Back
   each  val in bio
     div.row

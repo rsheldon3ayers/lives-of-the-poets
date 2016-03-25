@@ -13,7 +13,9 @@ module.exports.get = (req, res) => {
 
   const poetrydb = 'http://poetrydb.org/author/'
   const author = req.params.lastName
+  const name = req.params.searchName
   const url = poetrydb + author;
+
 
   request(url, (err, response, poems) => {
       if (err) throw err;
@@ -47,7 +49,10 @@ module.exports.get = (req, res) => {
 
     } else {
         console.log('Poem not found in poetrydb')
-        const url = 'http://www.poemhunter.com/joseph-addison/poems/'
+
+        console.log("here it is>>>>", name)
+        let randParam = ''
+        const url = 'http://www.poemhunter.com/' + name + '/poems/'
         request.get(url, (err, response, body) => {
           if (err) throw err
             const paramArray = []
@@ -55,36 +60,39 @@ module.exports.get = (req, res) => {
             const $tableTitle = $('.title')
 
             _.range(1, 10).forEach(i => {
-            const $paramParent = $tableTitle.eq(i);
-            paramArray.push($paramParent.find('a').attr('href'))
+              const $paramParent = $tableTitle.eq(i);
+              paramArray.push($paramParent.find('a').attr('href'))
+            })
+          randParam = paramArray[Math.floor(Math.random() * paramArray.length)];
 
 
-        })
 
-      }).on('end', ()=> {
-        request('http://www.poemhunter.com/poem/an-account-of-the-greatest-english-poets/', (err, response, body) => {
+          request('http://www.poemhunter.com/' + randParam, (err, response, body) => {
             if (err) throw err
-            const WTF = []
+            const lines = []
             const $ = cheerio.load(body, {
                                           normalizeWhitespace: true
 
                                       })
+            const $Title = $('#solSiirMetinDV').find('h1').html()
 
-            const $KonaBody = $('br')
+            const $PoemBody = $('br')
 
-            _.range(0, $KonaBody.length).forEach(i =>  {
-              WTF.push($KonaBody[i].prev.data);
+            _.range(0, $PoemBody.length).forEach(i =>  {
+              lines.push($PoemBody[i].prev.data);
             })
 
 
-            res.render('readPoem', {title: "Blah", author: "Addison", lines: WTF})
+            res.render('readPoem', {title: $Title, author: "", lines: lines})
 
 
-            console.log("should be a poem", WTF)
 
+
+          })
         })
-      })
-    }
-  })
 
-}
+      }
+    })
+  }
+
+
