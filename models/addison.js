@@ -4,9 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 
 module.exports = mongoose.model('addison',
-  mongoose.Schema({
-    life: [
-      String
-    ]
-  })
+    mongoose.Schema({
+        life: [
+            String
+        ]
+    })
 );

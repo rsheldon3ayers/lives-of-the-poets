@@ -1,3 +1,5 @@
-# This is a digitized abridgment of Lives of the Poets by the 18th Century poet, essayist, lexicographer and moralist Samuel Johnson.
+# Lives of the Poets
+
+This is a digitized abridgment of Dr. Johnson's seminal work on the most significant poets of the eighteenth century. I used Node, Express and MongoDB on the back-end and Foundation for styling purposes.
 
 

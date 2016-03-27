@@ -4,10 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 
 module.exports = mongoose.model('milton',
-  mongoose.Schema({
-    life: [
-      String
-    ]
-  })
+    mongoose.Schema({
+        life: [
+            String
+        ]
+    })
 );
-
