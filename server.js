@@ -25,17 +25,17 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-// fs.readFile('./public/poetLives/milton.txt', 'utf8', (err, life) => {
-//   if (err) throw err;
+fs.readFile('./public/poetLives/milton.txt', 'utf8', (err, life) => {
+  if (err) throw err;
 
-//   let newSwift = life.split('\n\n');
-//   let newLife = new Swift({life: newSwift })
-//   newLife.save((err) => {
-//     if (err) throw err;
-//     console.log('saved!');
-//   })
-//   // console.log(milton);
-// });
+  let newSwift = life.split('\n\n');
+  let newLife = new Swift({life: newSwift })
+  newLife.save((err) => {
+    if (err) throw err;
+    console.log('saved!');
+  })
+  // console.log(milton);
+});
 
 app.listen(PORT, () => {
     console.log(`Express server listening on port: ${PORT}`);
