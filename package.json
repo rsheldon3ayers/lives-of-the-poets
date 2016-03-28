@@ -40,6 +40,10 @@
     "pg": "^4.5.1",
     "request": "^2.69.0"
   },
+  "engines": {
+  "node": "5.5.0",
+  "npm": "3.5.3"
+},
   "devDependencies": {
     "nodemon": "^1.9.1"
   }
