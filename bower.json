@@ -1,0 +1,22 @@
+{
+  "name": "lives-of-the-poets",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Robert Ayers <rsheldon3ayers@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rsheldon3ayers/lives-of-the-poets",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.0"
+  }
+}
