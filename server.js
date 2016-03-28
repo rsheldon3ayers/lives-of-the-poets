@@ -9,8 +9,8 @@ const fs = require('fs');
 const Swift = require('./models/swift')
 
 
-const MONGODB_USER = process.env.MONGODB_USER || 'DrJohnson';
-const MONGODB_PASS = process.env.MONGODB_PASS || 'vanity';
+const MONGODB_USER = process.env.MONGODB_USER
+const MONGODB_PASS = process.env.MONGODB_PASS
 const MONGODB_NAME = process.env.MONGODB_NAME || 'lives-of-poets';
 
 const MONGODB_URL = `mongodb://${MONGODB_USER}:${MONGODB_PASS}@ds011379.mlab.com:11379/lives-of-poets`;
